@@ -7,7 +7,7 @@
         //    - Method Signature: void PrintNumbers()
         public static void PrintNumbers()
         {
-            for (int i =-1000; i <= 1000; i++)
+            for (int i =1000; i >= -1000; i--)
             {
                 Console.WriteLine(i);
             }
@@ -53,9 +53,7 @@
         //    - Returns true if the candidate can vote, false otherwise.
         //    - Hint: Use `int.Parse()` or the safer `int.TryParse()` for extra practice in handling user input.
         public static bool CanVote(int age)
-        {   Console.WriteLine("Please provide your age once again");
-            age =int.Parse(Console.ReadLine()) ;
-            
+        {   
             return age>18;
         }
 
@@ -74,9 +72,9 @@
         //    - Should print each line in the format: "1 * number = result"
         public static void DisplayMultiplicationTable(int number)
         {
-            for (int i = 0; i < 12; i++)
+            for (int i = 1; i <= 12; i++)
          {
-                Console.WriteLine(number*i);
+                Console.WriteLine($"{i}*{number}={i*number}");
             }
         }
 
@@ -108,12 +106,18 @@
             Console.WriteLine("Is -34 positive: "+IsPositive(-34));
             
             Console.WriteLine("New Method Check 6");
-            Console.WriteLine("Is 4 years can vote? "+CanVote(4));
-            Console.WriteLine("Is 16 years can vote? "+CanVote(16));
-            Console.WriteLine("Is 24 years can vote? "+CanVote(24));
-            Console.WriteLine("Is 104 years can vote? "+CanVote(104));
-            Console.WriteLine("Is 14 years can vote? "+CanVote(14));
+            Console.WriteLine("Enter your age:");
+            int age = int.Parse(Console.ReadLine());
+            Console.WriteLine(CanVote(age)?"You can Vote!":"You young for vote yet!");
             
+            Console.WriteLine("Enter your age:");
+            age = int.Parse(Console.ReadLine());
+            Console.WriteLine(CanVote(age)?"You can Vote!":"You young for vote yet!");
+            
+            Console.WriteLine("Enter your age:");
+            age = int.Parse(Console.ReadLine());
+            Console.WriteLine(CanVote(age)?"You can Vote!":"You young for vote yet!");
+
             Console.WriteLine("New Method Check 7");
             Console.WriteLine("Is 6 in a range -10 and 10 "+IsInRange(6));
             Console.WriteLine("Is -9 in a range -10 and 10 "+IsInRange(-9));
